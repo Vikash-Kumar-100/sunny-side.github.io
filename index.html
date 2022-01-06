@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Re'Recursive',cursive&display=swap');
+    .attribution { width: 100%; font-size: 18px; text-align: center; font-family: sans-serif; 
+      background-color:#2C7566; color:white; font-weight: bolder; }
+    .attribution a { color: cyan; }
+
+    :root{
+      --desk-orange-slice:url(images/desktop/image-header.jpg);
+      --desk-egg:url(images/desktop/image-transform.jpg);
+      --desk-glass:url(images/desktop/image-stand-out.jpg);
+      --desk-cherry:url(images/desktop/image-graphic-design.jpg);
+      --desk-orange:url(images/desktop/image-photography.jpg);
+      --desk-bottel:url(images/desktop/image-gallery-milkbottles.jpg);
+      --desk-plate:url(images/desktop/image-gallery-orange.jpg);
+      --desk-cone:url(images/desktop/image-gallery-cone.jpg);
+      --desk-cube:url(images/desktop/image-gallery-sugarcubes.jpg);
+      --emily:url(images/image-emily.jpg);
+      --thomas:url(images/image-thomas.jpg);
+      --jennie:url(images/image-jennie.jpg);
+
+      --mob-orange-slice:url(images/mobile/image-header.jpg);
+      --mob-egg:url(images/mobile/image-transform.jpg);
+      --mob-glass:url(images/mobile/image-stand-out.jpg);
+      --mob-cherry:url(images/mobile/image-graphic-design.jpg);
+      --mob-orange:url(images/mobile/image-photography.jpg);
+      --mob-bottel:url(images/mobile/image-gallery-milkbottles.jpg);
+      --mob-plate:url(images/mobile/image-gallery-orange.jpg);
+      --mob-cone:url(images/mobile/image-gallery-cone.jpg);
+      --mob-cube:url(images/mobile/image-gallery-sugar-cubes.jpg);
+
+      --arrow:url(images/icon-arrow-down.svg);
+      --logo:url(images/logo.svg);
+      --logo2:url(images/logo2.svg);
+      --facebook:url(images/icon-facebook.svg);
+      --insta:url(images/icon-instagram.svg);
+      --pin:url(images/icon-pinterest.svg);
+      --bird:url(images/icon-twitter.svg);
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .wrapper{
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+    }
+    .div-top{
+      width: 100%;
+      height: 100vh;
+      background-image: var(--desk-orange-slice);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav{
+      width: 100%;
+      min-height: 60px;
+      background-color: #fff4;
+
+      display: flex;
+    }
+    .logo-area{
+      width: 30%;
+      height: 100%;
+      /*background-color: coral;*/
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo{
+      height: 30px;
+      width: 80%;
+      background-size: contain;
+      background-image: var(--logo);
+      background-repeat: no-repeat;
+    }
+    .button-area{
+      width: 70%;
+      height: 100%;
+      /*background-color: cornflowerblue;*/
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+    .btn{
+      font-size: 22px;
+      font-family: sans-serif;
+      color:white;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    .btn:last-child{
+      font-size: 16px;
+      margin-right: 30px;
+      color:black;
+
+      background-color: #fff;
+      padding: 10px;
+      border-radius:20px;
+
+      transition: .5s background-color;
+    }
+    .btn:last-child:hover{
+      background-color: #fff5;
+      color:white;
+    }
+
+    .div-top h1{
+      font-size: 68px;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-weight: bolder;
+      margin-top: 100px;
+      color:white;
+
+      word-spacing: 15px;
+    }
+
+    .arrow{
+      width: 40px;
+      height: 120px;
+      background-image: var(--arrow);
+      background-repeat: no-repeat;
+
+      margin-top: 40px;
+    }
+/* ---------- */
+
+    .div-center{
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ddecfb;
+    }
+    .row1,.row2,.box1,.box2{
+      /*padding: 20px;*/
+      width: 80%;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .row1 div,.row2 div{
+      width: 50%;
+      min-height: 100%;
+    }
+    .r1-p,.r2-p{
+      padding: 50px;
+      min-height: 50vh;
+      background-color: white;
+    }
+    .r1-img{
+      background-image: var(--mob-egg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .r2-img{
+      background-image: var(--desk-glass);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .row3{
+      display: flex;
+      width: 80%;
+    }
+    .box1,.box2{
+      background-size: 100% 100%;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /*justify-content: flex-end;  */
+      padding: 10px;
+
+    }
+    .box1{
+      background-image: var(--desk-cherry);
+    }
+    .box2{
+      background-image: var(--desk-orange);
+    }
+    .box1 h2,.box2 h2{
+      font-size: 18px;
+      /*background-color: white;*/
+      text-align: center;
+      margin-top: 180px !important;
+    }
+    .div-center .box1 p,.div-center .box2 p{
+      width: 100%;
+      height: 30%;
+      padding: 0 20px;
+      color:#0009;
+      line-height: 25px; 
+      font-size: 17px;
+      text-align: center;
+      /*background-color: tomato;*/
+    }
+    .div-center h2{
+      font-size: 34px;
+      font-family: sans-serif;
+      margin-top: 10px; 
+    }
+    .div-center p{
+      margin-top: 10px;
+      font-size: 18px;
+      font-family: 'Recursive',cursive;
+      color: hsl(232, 10%, 55%);
+      /*word-spacing: 4px;*/
+    }
+
+    .div-center h3{
+      font-size: 20px;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*text-decoration: underline;*/
+      width: 130px;
+      height: 35px;
+      padding: 4px;
+      color:white;
+
+      cursor: pointer;
+    }
+    .a1{
+      background-color: hsl(51, 100%, 49%); 
+      margin-top: 30px;
+
+    } 
+    .a2{
+      background-color: hsl(7, 99%, 70%);
+      margin-top: 20px;
+    }
+    .client{
+      width: 100%;
+      min-height: 500px;
+      background-color: #ddecfb;
+
+      /*background: gray;*/
+    }
+    .heading-area{
+      width: 100%;
+      min-height: 100px;
+      /*background-color: coral;*/
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .heading-area h2{
+      font-size: 28px;
+      font-family: sans-serif;
+      /*margin-bottom: 20px;*/
+      color:hsl(198, 62%, 26%);
+    }
+    .card-area{
+      width: 100%;
+      min-height: 400px;
+      /*background-color: yellow;*/
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .card{
+      min-height:320px;
+      width: 300px;
+      background-color: #fff;
+      margin: 20px 20px;
+      padding: 20px;
+
+      border-radius: 5px;
+      /*box-shadow: 0 0 1px 0 black;*/
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .card .img{
+      width: 80px;
+      height: 80px;
+      /*background-color: tomato;*/
+      border-radius: 50%;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .card p{
+      margin-top: 20px;
+      font-size: 16px;
+      font-family: 'Recursive',cursive;
+      color: hsl(212, 27%, 19%);
+
+    }
+    .card h2{
+      margin: 10px 0;
+      font-weight: bolder;
+    }
+    .card h4{
+      font-family: sans-serif;
+      font-size: 14px; 
+      color: hsl(232, 10%, 55%);
+
+    }
+
+    .card1-img{
+      background-image: var(--emily);
+    }
+    .card2-img{
+      background-image: var(--thomas);
+    }
+    .card3-img{
+      background-image: var(--jennie);
+    }
+
+    .img-row{
+      width: 100%;
+      background-color: tomato;
+      height: 50vh;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-row div{
+      /*width:;*/
+      min-width: 25%;
+      height: 100%;
+      background-color: orange;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .bottel{
+      background-image: var(--desk-bottel);
+    }
+    .plate{
+      background-image: var(--desk-plate);
+    }
+    .cone{
+      background-image: var(--desk-cone);
+    }
+    .cube{
+      background-image: var(--desk-cube);
+    }
+
+    .footer{
+      width: 100%;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(168, 34%, 60%);
+    }
+    .logo-footer{
+      width: 220px;
+      height: 40px;
+      margin-bottom: 20px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: var(--logo2);
+    }
+
+    .menu-footer{
+      width: 50%;
+      height: 50px;
+      /*background-color: #fff;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      color:#2C7566;
+      cursor: pointer;
+    }
+    .menu-footer h2{
+      margin: 0 20px;
+    }
+
+    .social-media{
+      width: 320px;
+      height: 50px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .social-media div{
+      width: 30px;
+      height: 30px;
+      margin: 0 20px;
+      /*background-color: tomato;*/
+
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      cursor: pointer;
+    }
+
+  </style>
+  <link rel="stylesheet" href="media-quaries.css">
+
+</head>
+<body>
+
+
+  <div class="wrapper">
+
+    <div class="div-top">
+      <div class="nav">
+        
+        <div class="logo-area">
+          <div class="logo"></div>
+        </div>
+
+        <div class="button-area">
+          <div class="btn">About</div>
+          <div class="btn">Services</div>
+          <div class="btn">Project</div>
+          <div class="btn">Contact</div>
+        </div>
+
+      </div><!-- logo ends here -->
+      <h1>we are creatives</h1>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="div-center">
+
+      <div class="row1">
+
+        <div class="r1-p">
+          <h2>Transform your brand</h1>
+          <p>
+            We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+          </p>
+          <h3 class="a1">Learn More</h3>
+        </div>
+
+        <div class="r1-img"></div>
+      </div>
+
+      <div class="row2">
+
+        <div class="r2-img"></div>
+        <div class="r2-p">
+          <h2>Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+          </p>
+          <h3 class="a2" style="background-color: hsl(7, 99%, 70%); margin-top: 20px;">Learn more</h3>
+        </div>
+
+      </div> <!-- rows2 ends here -->
+
+      <div class="row3">
+
+        <div class="box1">
+          <h2 style="color: hsl(167, 40%, 24%);">Graphic design</h2>
+          <p style="color:hsl(167, 40%, 24%)">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+          </p>
+        </div>
+
+        <div class="box2"> 
+          <h2 style="color: hsl(198, 62%, 26%);">Photography</h2>
+          <p style="color: hsl(198, 62%, 26%);">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          </p>
+        </div>
+
+      </div>
+
+    </div> <!-- div2 ends -->
+
+    <div class="client">
+      
+      <div class="heading-area">
+        <h2>CLIENT TESTIMONIALS</h2>
+      </div>
+
+      <div class="card-area">
+<!--  -->   
+        <div class="card card1">
+          <div class="img card1-img"></div>
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit
+          </p>
+          <h2>Emily R.</h2>
+          <h4>Marketing Director</h4>
+          
+        </div>
+<!--  -->
+        <div class="card card2">
+          <div class="img card2-img"></div>
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h2>Thomas S.</h2>
+          <h4>Chief Operating Officer</h4>
+        </div>
+<!--  -->
+        <div class="card card3">
+          <div class="img card3-img"></div>
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+          </p>
+          <h2>Jennie F.</h2>
+          <h4>Business Owner</h4>
+        </div>
+<!--  -->   
+      </div><!-- card-area ends here -->
+
+    </div><!-- testiomonial ends here -->
+
+    <div class="img-row">
+      <div class="bottel"></div>
+      <div class="plate"></div>
+      <div class="cone"></div>
+      <div class="cube"></div>
+    </div><!-- img-row ends here -->
+
+    <div class="footer">
+      <div class="logo-footer"></div>
+      <div class="menu-footer">
+        <h2>About</h2>
+        <h2>Service</h2>
+        <h2>Product</h2>
+      </div>
+
+      <div class="social-media">
+        <div class="face" style="background-image: var(--facebook);"></div>
+        <div class="insta" style="background-image: var(--insta);"></div>
+        <div class="bird" style="background-image: var(--bird);"></div>
+        <div class="pin" style="background-image: var(--pin);"></div>
+      </div>
+    </div>
+
+  </div> 
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br> 
+    Coded by <a href="#">Vikash Kumar</a>.
+  </div>
+</body>
+</html>

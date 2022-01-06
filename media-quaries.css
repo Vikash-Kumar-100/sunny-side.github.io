@@ -1,0 +1,125 @@
+@media screen and (max-width:860px) {
+
+	.div-top{
+		background-size: 140% 100%;
+		background-position: center;
+	}
+	.div-top h1{
+		font-size: 58px;
+		text-align: center;
+		width: 100%;
+	}
+	.row1,.row2,.box1,.box2,.row3{
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width:660px){
+	.div-top{
+		background-size: 200% 100%;
+		background-position: center;
+	}
+	.nav{
+		flex-direction: column;
+		align-items: center;
+		min-height: 70px;
+	}
+	.logo-area{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo{
+		width: 200px;
+	}
+	.button-area{
+		width: 100%;
+		height: auto;
+		/*min-height: 100px;*/
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+	}
+	.btn{
+		font-size: 18px;
+		/*margin: 5px;*/
+	}
+	.row1,.row2,.row3{
+		flex-direction: column;
+		width: 80%;
+	}
+	.row1{
+		flex-direction: column-reverse;
+		/*margin-top: 10px/*/
+	}
+	.row1 div,.row2 div{
+		width: 100%;
+		min-height: 50vh;
+	}
+	.row3{
+		width: 80%;
+	}
+
+	.img-row div{
+		width: 50%;
+		height: 30vh;
+		background-size: 100% 100%;
+	}
+	.footer{
+		height: 60vh;
+	}
+
+	.bottel{
+      background-image: var(--mob-bottel);
+    }
+    .plate{
+      background-image: var(--mob-plate);
+    }
+    .cone{
+      background-image: var(--mob-cone);
+    }
+    .cube{
+      background-image: var(--mob-cube);
+    }
+
+}
+
+@media screen and (max-width:500px){
+	.div-top{
+		background-image: var(--mob-orange-slice);
+		background-size: 120% 100%;
+	}
+	.logo{
+		width: 150px;
+	}
+	.div-top h1{
+		font-size: 52px;
+	}
+	.row1,.row2,.row3{
+		width: 100%;
+	}
+	.row1 div,.row2 div{
+		padding: 10px;
+	}
+
+	.footer h2{
+		margin: 0 10px;
+	}
+
+}
+
+@media screen and (max-width:380px){
+	.social-media div{
+		margin: 0 10px;
+	}
+	.client h2{
+		text-align: center;
+	}
+	.menu-footer{
+		margin: 0 4px;
+	}
+}
